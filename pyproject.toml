@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "persiantokenbench"
+version = "0.1.0"
+description = "Measuring how much more Persian text costs than English, at the tokeniser level"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Jawad Noori", email = "jawadnoori1@outlook.com" }]
+keywords = ["tokeniser", "persian", "farsi", "nlp", "cost"]
+
+dependencies = [
+    "tiktoken>=0.7",
+    "transformers>=4.44",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+# I only need `datasets` to rebuild the corpus from source, so it stays optional.
+data = ["datasets>=2.20"]
+dev = ["ruff>=0.6", "pytest>=8.0"]
+
+[project.scripts]
+ptb = "persiantokenbench.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/persiantokenbench"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
