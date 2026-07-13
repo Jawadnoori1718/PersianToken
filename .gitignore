@@ -12,3 +12,6 @@ venv/
 .DS_Store
 
 # I keep results/ and figures/ under version control on purpose, so they are not ignored.
+
+# I build the FLORES corpus locally rather than committing it (CC BY-SA share alike).
+data/corpus.jsonl
