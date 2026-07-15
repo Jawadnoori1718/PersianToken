@@ -43,11 +43,20 @@ Persian. This project puts a number on it.
 I run several tokenisers so the finding does not rest on any one vendor:
 
 - The GPT family via `tiktoken` (cl100k_base and o200k_base).
-- Open models via Hugging Face: Llama 3, Qwen2.5, Mistral, Gemma, and a
-  multilingual model (Aya or BLOOM) as a contrast.
+- Open models via Hugging Face: Llama 3, Qwen2.5, Mistral, Gemma, and BLOOM
+  as a multilingual contrast.
 
-Claude's exact tokeniser is not public, so I will not fake counts for it. I say
-plainly how I handle that as the code for the tokeniser layer lands.
+## A note on Claude
+
+I do not include Claude in the numbers. Its tokeniser is not published, so any
+"Claude token count" I printed would be a guess dressed up as a measurement. The
+older tokeniser Anthropic once shipped does not match the current models, and the
+token-counting endpoint needs a network call to Anthropic, which this local-only
+project deliberately avoids.
+
+So I leave Claude out rather than publish a figure I cannot stand behind. If you
+want a rough sense of where it might sit, the open multilingual tokenisers here
+(BLOOM especially) are a fairer reference than any English-first tokeniser.
 
 ## Method, briefly
 
