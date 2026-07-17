@@ -1,0 +1,226 @@
+id,tokeniser,family,approximate,en_tokens,fa_tokens
+sample-001,gpt-4 cl100k_base,gpt,False,7,15
+sample-002,gpt-4 cl100k_base,gpt,False,10,26
+sample-003,gpt-4 cl100k_base,gpt,False,9,20
+sample-004,gpt-4 cl100k_base,gpt,False,10,22
+sample-005,gpt-4 cl100k_base,gpt,False,8,22
+sample-006,gpt-4 cl100k_base,gpt,False,7,23
+sample-007,gpt-4 cl100k_base,gpt,False,9,23
+sample-008,gpt-4 cl100k_base,gpt,False,9,30
+sample-009,gpt-4 cl100k_base,gpt,False,10,28
+sample-010,gpt-4 cl100k_base,gpt,False,9,26
+sample-011,gpt-4 cl100k_base,gpt,False,9,31
+sample-012,gpt-4 cl100k_base,gpt,False,10,27
+sample-013,gpt-4 cl100k_base,gpt,False,8,24
+sample-014,gpt-4 cl100k_base,gpt,False,9,27
+sample-015,gpt-4 cl100k_base,gpt,False,10,33
+sample-016,gpt-4 cl100k_base,gpt,False,8,18
+sample-017,gpt-4 cl100k_base,gpt,False,10,24
+sample-018,gpt-4 cl100k_base,gpt,False,8,38
+sample-019,gpt-4 cl100k_base,gpt,False,9,34
+sample-020,gpt-4 cl100k_base,gpt,False,10,17
+sample-021,gpt-4 cl100k_base,gpt,False,10,28
+sample-022,gpt-4 cl100k_base,gpt,False,7,16
+sample-023,gpt-4 cl100k_base,gpt,False,8,30
+sample-024,gpt-4 cl100k_base,gpt,False,6,22
+sample-025,gpt-4 cl100k_base,gpt,False,8,26
+sample-026,gpt-4 cl100k_base,gpt,False,7,23
+sample-027,gpt-4 cl100k_base,gpt,False,7,18
+sample-028,gpt-4 cl100k_base,gpt,False,9,23
+sample-029,gpt-4 cl100k_base,gpt,False,7,22
+sample-030,gpt-4 cl100k_base,gpt,False,7,20
+sample-031,gpt-4 cl100k_base,gpt,False,7,22
+sample-032,gpt-4 cl100k_base,gpt,False,8,23
+sample-033,gpt-4 cl100k_base,gpt,False,9,36
+sample-034,gpt-4 cl100k_base,gpt,False,9,27
+sample-035,gpt-4 cl100k_base,gpt,False,9,22
+sample-036,gpt-4 cl100k_base,gpt,False,9,25
+sample-037,gpt-4 cl100k_base,gpt,False,7,24
+sample-038,gpt-4 cl100k_base,gpt,False,10,26
+sample-039,gpt-4 cl100k_base,gpt,False,10,24
+sample-040,gpt-4 cl100k_base,gpt,False,8,24
+sample-041,gpt-4 cl100k_base,gpt,False,10,50
+sample-042,gpt-4 cl100k_base,gpt,False,8,20
+sample-043,gpt-4 cl100k_base,gpt,False,8,24
+sample-044,gpt-4 cl100k_base,gpt,False,9,36
+sample-045,gpt-4 cl100k_base,gpt,False,7,24
+sample-001,gpt-4o o200k_base,gpt,False,7,7
+sample-002,gpt-4o o200k_base,gpt,False,10,14
+sample-003,gpt-4o o200k_base,gpt,False,9,10
+sample-004,gpt-4o o200k_base,gpt,False,10,10
+sample-005,gpt-4o o200k_base,gpt,False,8,10
+sample-006,gpt-4o o200k_base,gpt,False,7,11
+sample-007,gpt-4o o200k_base,gpt,False,9,10
+sample-008,gpt-4o o200k_base,gpt,False,9,13
+sample-009,gpt-4o o200k_base,gpt,False,10,12
+sample-010,gpt-4o o200k_base,gpt,False,9,12
+sample-011,gpt-4o o200k_base,gpt,False,9,14
+sample-012,gpt-4o o200k_base,gpt,False,10,12
+sample-013,gpt-4o o200k_base,gpt,False,8,11
+sample-014,gpt-4o o200k_base,gpt,False,9,10
+sample-015,gpt-4o o200k_base,gpt,False,10,15
+sample-016,gpt-4o o200k_base,gpt,False,8,10
+sample-017,gpt-4o o200k_base,gpt,False,10,13
+sample-018,gpt-4o o200k_base,gpt,False,8,14
+sample-019,gpt-4o o200k_base,gpt,False,9,15
+sample-020,gpt-4o o200k_base,gpt,False,10,10
+sample-021,gpt-4o o200k_base,gpt,False,10,16
+sample-022,gpt-4o o200k_base,gpt,False,7,9
+sample-023,gpt-4o o200k_base,gpt,False,8,15
+sample-024,gpt-4o o200k_base,gpt,False,6,11
+sample-025,gpt-4o o200k_base,gpt,False,8,14
+sample-026,gpt-4o o200k_base,gpt,False,7,9
+sample-027,gpt-4o o200k_base,gpt,False,7,9
+sample-028,gpt-4o o200k_base,gpt,False,9,13
+sample-029,gpt-4o o200k_base,gpt,False,7,12
+sample-030,gpt-4o o200k_base,gpt,False,7,12
+sample-031,gpt-4o o200k_base,gpt,False,7,9
+sample-032,gpt-4o o200k_base,gpt,False,8,10
+sample-033,gpt-4o o200k_base,gpt,False,9,13
+sample-034,gpt-4o o200k_base,gpt,False,9,13
+sample-035,gpt-4o o200k_base,gpt,False,9,11
+sample-036,gpt-4o o200k_base,gpt,False,9,13
+sample-037,gpt-4o o200k_base,gpt,False,7,11
+sample-038,gpt-4o o200k_base,gpt,False,9,11
+sample-039,gpt-4o o200k_base,gpt,False,10,15
+sample-040,gpt-4o o200k_base,gpt,False,8,14
+sample-041,gpt-4o o200k_base,gpt,False,10,25
+sample-042,gpt-4o o200k_base,gpt,False,8,11
+sample-043,gpt-4o o200k_base,gpt,False,8,13
+sample-044,gpt-4o o200k_base,gpt,False,9,18
+sample-045,gpt-4o o200k_base,gpt,False,7,12
+sample-001,qwen2.5,qwen,False,7,13
+sample-002,qwen2.5,qwen,False,10,20
+sample-003,qwen2.5,qwen,False,9,16
+sample-004,qwen2.5,qwen,False,10,19
+sample-005,qwen2.5,qwen,False,8,19
+sample-006,qwen2.5,qwen,False,7,19
+sample-007,qwen2.5,qwen,False,9,18
+sample-008,qwen2.5,qwen,False,9,25
+sample-009,qwen2.5,qwen,False,10,22
+sample-010,qwen2.5,qwen,False,9,21
+sample-011,qwen2.5,qwen,False,9,25
+sample-012,qwen2.5,qwen,False,10,22
+sample-013,qwen2.5,qwen,False,8,17
+sample-014,qwen2.5,qwen,False,9,20
+sample-015,qwen2.5,qwen,False,10,25
+sample-016,qwen2.5,qwen,False,8,15
+sample-017,qwen2.5,qwen,False,10,21
+sample-018,qwen2.5,qwen,False,8,30
+sample-019,qwen2.5,qwen,False,9,25
+sample-020,qwen2.5,qwen,False,10,15
+sample-021,qwen2.5,qwen,False,10,22
+sample-022,qwen2.5,qwen,False,7,13
+sample-023,qwen2.5,qwen,False,8,23
+sample-024,qwen2.5,qwen,False,6,20
+sample-025,qwen2.5,qwen,False,8,20
+sample-026,qwen2.5,qwen,False,7,16
+sample-027,qwen2.5,qwen,False,7,11
+sample-028,qwen2.5,qwen,False,9,22
+sample-029,qwen2.5,qwen,False,7,18
+sample-030,qwen2.5,qwen,False,7,16
+sample-031,qwen2.5,qwen,False,7,16
+sample-032,qwen2.5,qwen,False,8,17
+sample-033,qwen2.5,qwen,False,9,30
+sample-034,qwen2.5,qwen,False,9,21
+sample-035,qwen2.5,qwen,False,9,16
+sample-036,qwen2.5,qwen,False,9,21
+sample-037,qwen2.5,qwen,False,7,20
+sample-038,qwen2.5,qwen,False,10,23
+sample-039,qwen2.5,qwen,False,10,18
+sample-040,qwen2.5,qwen,False,8,22
+sample-041,qwen2.5,qwen,False,10,40
+sample-042,qwen2.5,qwen,False,8,16
+sample-043,qwen2.5,qwen,False,8,16
+sample-044,qwen2.5,qwen,False,9,33
+sample-045,qwen2.5,qwen,False,7,19
+sample-001,mistral,mistral,False,7,24
+sample-002,mistral,mistral,False,10,28
+sample-003,mistral,mistral,False,9,29
+sample-004,mistral,mistral,False,10,32
+sample-005,mistral,mistral,False,8,28
+sample-006,mistral,mistral,False,7,32
+sample-007,mistral,mistral,False,9,33
+sample-008,mistral,mistral,False,9,41
+sample-009,mistral,mistral,False,11,36
+sample-010,mistral,mistral,False,10,32
+sample-011,mistral,mistral,False,9,41
+sample-012,mistral,mistral,False,11,39
+sample-013,mistral,mistral,False,10,29
+sample-014,mistral,mistral,False,9,35
+sample-015,mistral,mistral,False,10,45
+sample-016,mistral,mistral,False,8,24
+sample-017,mistral,mistral,False,10,34
+sample-018,mistral,mistral,False,8,47
+sample-019,mistral,mistral,False,9,41
+sample-020,mistral,mistral,False,10,29
+sample-021,mistral,mistral,False,10,35
+sample-022,mistral,mistral,False,7,23
+sample-023,mistral,mistral,False,10,38
+sample-024,mistral,mistral,False,6,32
+sample-025,mistral,mistral,False,10,38
+sample-026,mistral,mistral,False,7,31
+sample-027,mistral,mistral,False,8,27
+sample-028,mistral,mistral,False,9,34
+sample-029,mistral,mistral,False,7,31
+sample-030,mistral,mistral,False,8,28
+sample-031,mistral,mistral,False,7,33
+sample-032,mistral,mistral,False,8,30
+sample-033,mistral,mistral,False,9,48
+sample-034,mistral,mistral,False,9,38
+sample-035,mistral,mistral,False,10,32
+sample-036,mistral,mistral,False,12,35
+sample-037,mistral,mistral,False,8,34
+sample-038,mistral,mistral,False,10,42
+sample-039,mistral,mistral,False,10,30
+sample-040,mistral,mistral,False,8,38
+sample-041,mistral,mistral,False,11,67
+sample-042,mistral,mistral,False,10,29
+sample-043,mistral,mistral,False,8,36
+sample-044,mistral,mistral,False,10,49
+sample-045,mistral,mistral,False,7,32
+sample-001,bloom,bloom,False,7,8
+sample-002,bloom,bloom,False,10,14
+sample-003,bloom,bloom,False,9,12
+sample-004,bloom,bloom,False,10,14
+sample-005,bloom,bloom,False,8,13
+sample-006,bloom,bloom,False,7,13
+sample-007,bloom,bloom,False,9,10
+sample-008,bloom,bloom,False,9,18
+sample-009,bloom,bloom,False,9,15
+sample-010,bloom,bloom,False,9,16
+sample-011,bloom,bloom,False,9,15
+sample-012,bloom,bloom,False,11,15
+sample-013,bloom,bloom,False,9,12
+sample-014,bloom,bloom,False,9,14
+sample-015,bloom,bloom,False,10,20
+sample-016,bloom,bloom,False,8,9
+sample-017,bloom,bloom,False,10,13
+sample-018,bloom,bloom,False,8,18
+sample-019,bloom,bloom,False,9,16
+sample-020,bloom,bloom,False,10,10
+sample-021,bloom,bloom,False,10,17
+sample-022,bloom,bloom,False,7,9
+sample-023,bloom,bloom,False,10,16
+sample-024,bloom,bloom,False,6,15
+sample-025,bloom,bloom,False,8,14
+sample-026,bloom,bloom,False,8,12
+sample-027,bloom,bloom,False,8,9
+sample-028,bloom,bloom,False,9,16
+sample-029,bloom,bloom,False,7,13
+sample-030,bloom,bloom,False,8,12
+sample-031,bloom,bloom,False,7,9
+sample-032,bloom,bloom,False,8,8
+sample-033,bloom,bloom,False,9,22
+sample-034,bloom,bloom,False,10,12
+sample-035,bloom,bloom,False,9,10
+sample-036,bloom,bloom,False,11,17
+sample-037,bloom,bloom,False,8,12
+sample-038,bloom,bloom,False,9,13
+sample-039,bloom,bloom,False,10,16
+sample-040,bloom,bloom,False,8,16
+sample-041,bloom,bloom,False,10,28
+sample-042,bloom,bloom,False,10,13
+sample-043,bloom,bloom,False,8,12
+sample-044,bloom,bloom,False,9,25
+sample-045,bloom,bloom,False,7,13
