@@ -71,7 +71,7 @@ Every number is reproducible from the raw data with one command.
 
 ## Status
 
-Work in progress. I'm building the repository up in small steps: the data
+Work in progress. I am building the repository up in small steps: the data
 first, then the tokeniser layer, then the measurement, then the real cost and
 context impact, then the write-up. Results, figures, and a quickstart will land
 as those pieces go in.
