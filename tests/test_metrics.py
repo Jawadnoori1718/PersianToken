@@ -1,6 +1,6 @@
 import pandas as pd
 
-from persiantokenbench.metrics import add_ratio, summarise
+from persiantokenbench.metrics import add_ratio, bootstrap_mean_ci, summarise
 
 
 def _counts():
@@ -35,3 +35,26 @@ def test_summarise_point_estimates():
 def test_summarise_sorted_by_mean_desc():
     s = summarise(_counts())
     assert list(s["tokeniser"]) == ["t2", "t1"]
+
+
+def test_bootstrap_is_deterministic_with_seed():
+    vals = [1.0, 2.0, 3.0, 4.0, 5.0]
+    a = bootstrap_mean_ci(vals, n_boot=2000, seed=7)
+    b = bootstrap_mean_ci(vals, n_boot=2000, seed=7)
+    assert a == b
+
+
+def test_bootstrap_brackets_the_mean():
+    vals = [1.0, 2.0, 2.0, 3.0, 10.0]
+    lo, hi = bootstrap_mean_ci(vals, n_boot=5000, seed=0)
+    assert lo <= sum(vals) / len(vals) <= hi
+    assert lo < hi
+
+
+def test_bootstrap_zero_variance_collapses():
+    assert bootstrap_mean_ci([2.0, 2.0, 2.0], n_boot=100, seed=0) == (2.0, 2.0)
+
+
+def test_summarise_has_ci_around_mean():
+    row = summarise(_counts(), n_boot=500).set_index("tokeniser").loc["t1"]
+    assert row["ci_low"] <= row["mean_ratio"] <= row["ci_high"]
