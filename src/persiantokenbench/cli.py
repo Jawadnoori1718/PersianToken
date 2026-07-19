@@ -1,8 +1,8 @@
 """The ptb command line.
 
 A small argparse CLI: tokenise the corpus to raw counts, summarise them into
-per-tokeniser ratios, and turn those ratios into the extra cost Persian pays and
-the context it loses. A plots subcommand joins it once the figures land.
+per-tokeniser ratios, turn those ratios into the extra cost Persian pays and the
+context it loses, and draw the figures.
 """
 
 from __future__ import annotations
@@ -18,11 +18,13 @@ from persiantokenbench.corpus import default_corpus_path, load_corpus
 from persiantokenbench.cost import cost_table
 from persiantokenbench.measure import tokenise_corpus, write_counts
 from persiantokenbench.metrics import load_counts, summarise
+from persiantokenbench.plots import plot_context, plot_cost, plot_ratio
 
 DEFAULT_COUNTS = Path("results/token_counts.csv")
 DEFAULT_SUMMARY = Path("results/summary.csv")
 DEFAULT_COST = Path("results/cost.csv")
 DEFAULT_CONTEXT = Path("results/context.csv")
+DEFAULT_FIGURES = Path("figures")
 
 
 def _cmd_tokenise(args: argparse.Namespace) -> None:
@@ -95,6 +97,17 @@ def _cmd_context(args: argparse.Namespace) -> None:
     print(f"\nwrote {args.out}")
 
 
+def _cmd_plot(args: argparse.Namespace) -> None:
+    summary = pd.read_csv(args.summary)
+    cost = cost_table(summary, args.price, args.tokens)
+    context = context_table(summary, args.window)
+    args.dir.mkdir(parents=True, exist_ok=True)
+    plot_ratio(summary, args.dir / "ratio.png")
+    plot_cost(cost, args.dir / "cost.png")
+    plot_context(context, args.dir / "context.png")
+    print(f"wrote 3 figures to {args.dir}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(prog="ptb", description="Persian vs English token costs.")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -122,6 +135,14 @@ def main() -> None:
     x.add_argument("--out", type=Path, default=DEFAULT_CONTEXT, help="output context csv")
     x.add_argument("--window", type=float, default=128_000, help="context window in tokens")
     x.set_defaults(func=_cmd_context)
+
+    p = sub.add_parser("plot", help="draw the ratio, cost and context figures")
+    p.add_argument("--summary", type=Path, default=DEFAULT_SUMMARY, help="input summary csv")
+    p.add_argument("--dir", type=Path, default=DEFAULT_FIGURES, help="output figures dir")
+    p.add_argument("--price", type=float, default=3.0, help="price per million tokens")
+    p.add_argument("--tokens", type=float, default=1_000_000, help="workload in english tokens")
+    p.add_argument("--window", type=float, default=128_000, help="context window in tokens")
+    p.set_defaults(func=_cmd_plot)
 
     args = parser.parse_args()
     args.func(args)
