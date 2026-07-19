@@ -1,8 +1,8 @@
 """The ptb command line.
 
 A small argparse CLI: tokenise the corpus to raw counts, summarise them into
-per-tokeniser ratios, and turn those ratios into the extra cost Persian pays.
-More subcommands (context, plots) join it as those pieces land.
+per-tokeniser ratios, and turn those ratios into the extra cost Persian pays and
+the context it loses. A plots subcommand joins it once the figures land.
 """
 
 from __future__ import annotations
@@ -13,6 +13,7 @@ from pathlib import Path
 import pandas as pd
 
 from persiantokenbench.adapters import load_available
+from persiantokenbench.context import context_table
 from persiantokenbench.corpus import default_corpus_path, load_corpus
 from persiantokenbench.cost import cost_table
 from persiantokenbench.measure import tokenise_corpus, write_counts
@@ -21,6 +22,7 @@ from persiantokenbench.metrics import load_counts, summarise
 DEFAULT_COUNTS = Path("results/token_counts.csv")
 DEFAULT_SUMMARY = Path("results/summary.csv")
 DEFAULT_COST = Path("results/cost.csv")
+DEFAULT_CONTEXT = Path("results/context.csv")
 
 
 def _cmd_tokenise(args: argparse.Namespace) -> None:
@@ -74,6 +76,25 @@ def _cmd_cost(args: argparse.Namespace) -> None:
     print(f"\nwrote {args.out}")
 
 
+def _render_context(table, window: float) -> str:
+    show = table.copy()
+    for col in ("window", "effective_window", "lost_tokens"):
+        show[col] = show[col].map(lambda x: f"{x:,.0f}")
+    show["ratio"] = show["ratio"].map(lambda x: f"{x:.2f}")
+    show["lost_pct"] = show["lost_pct"].map(lambda x: f"{x:.0f}%")
+    header = f"context window {int(window):,} tokens\n"
+    return header + show.to_string(index=False)
+
+
+def _cmd_context(args: argparse.Namespace) -> None:
+    summary = pd.read_csv(args.summary)
+    table = context_table(summary, args.window)
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    table.to_csv(args.out, index=False)
+    print(_render_context(table, args.window))
+    print(f"\nwrote {args.out}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(prog="ptb", description="Persian vs English token costs.")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -95,6 +116,12 @@ def main() -> None:
     c.add_argument("--price", type=float, default=3.0, help="price per million tokens")
     c.add_argument("--tokens", type=float, default=1_000_000, help="workload in english tokens")
     c.set_defaults(func=_cmd_cost)
+
+    x = sub.add_parser("context", help="how much less persian fits in a context window")
+    x.add_argument("--summary", type=Path, default=DEFAULT_SUMMARY, help="input summary csv")
+    x.add_argument("--out", type=Path, default=DEFAULT_CONTEXT, help="output context csv")
+    x.add_argument("--window", type=float, default=128_000, help="context window in tokens")
+    x.set_defaults(func=_cmd_context)
 
     args = parser.parse_args()
     args.func(args)
