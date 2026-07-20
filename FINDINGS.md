@@ -80,3 +80,39 @@ for Persian.
 
 So the tariff is not a law of nature. It is a design choice, and a bigger, more
 multilingual vocabulary closes most of the gap.
+
+## Limitations
+
+I would rather be plain about what this does not show.
+
+- Corpus size. The headline runs on 45 sentence pairs that I wrote and translated
+  myself. That is enough to show the effect and to exercise the pipeline, but it
+  is small, and it is not a standard benchmark. The confidence intervals here are
+  wider than a large run would give. For firmer numbers, build the FLORES-200
+  corpus and rerun; the pipeline does this from one command.
+
+- Claude is not included. Its tokeniser is not published, so any Claude number
+  would be a guess dressed up as a measurement. I leave it out rather than fake
+  it. See the note in the README.
+
+- Dialect and register. I use standard written Iranian Persian. Other varieties
+  such as Dari and Tajik, and colloquial or heavily informal registers, may
+  tokenise differently. My sample is everyday prose, not code, poetry, or
+  technical text, all of which can shift the ratio.
+
+- The price is a single flat knob. I hold it flat on purpose, to isolate the
+  tokeniser. Real bills combine the tokeniser with each vendor's own price, so
+  the cost figures show the size of the tokeniser effect, not a price comparison
+  between products.
+
+- English is the baseline, not a neutral yardstick. The tariff is measured
+  against English, which is itself the favoured case. These numbers say how much
+  more Persian costs than English, not how Persian compares to some neutral ideal.
+
+- Not every tokeniser ran. Llama 3 and Gemma are gated on Hugging Face, so they
+  were skipped in my run unless you log in and accept their terms. The set here
+  is a sensible spread, not the whole field.
+
+- I count content tokens only, with no special or chat tokens. Real requests add
+  a handful of those. They barely move the ratio, but they do nudge the absolute
+  counts.
