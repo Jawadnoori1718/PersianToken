@@ -83,6 +83,9 @@ out of the box. For the larger FLORES-200 corpus, follow [DATA.md](DATA.md) and
 rerun. The bootstrap is seeded, so the confidence intervals are identical on
 every run.
 
+Or run the whole pipeline in one command with `make all`. The `make` targets go
+through `PYTHONPATH=src`, so they keep working even if the editable link drops.
+
 > On macOS with Homebrew, an editable install can lose its link between sessions.
 > If `ptb` reports it cannot find the package, re-link with
 > `pip install -e . --no-deps`, or run any command as
