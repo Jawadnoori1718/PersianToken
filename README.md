@@ -109,18 +109,6 @@ through `PYTHONPATH=src`, so they keep working even if the editable link drops.
   have logged in to Hugging Face and accepted their terms; otherwise they are
   skipped with a warning.
 
-## A note on Claude
-
-I do not include Claude in the numbers. Its tokeniser is not published, so any
-"Claude token count" I printed would be a guess dressed up as a measurement. The
-older tokeniser Anthropic once shipped does not match the current models, and the
-token-counting endpoint needs a network call to Anthropic, which this local-only
-project deliberately avoids.
-
-So I leave Claude out rather than publish a figure I cannot stand behind. If you
-want a rough sense of where it might sit, the open multilingual tokenisers here
-(BLOOM especially) are a fairer reference than any English-first tokeniser.
-
 ## Data
 
 The committed sample is 45 English and Persian pairs I wrote and translated

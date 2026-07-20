@@ -91,10 +91,6 @@ I would rather be plain about what this does not show.
   wider than a large run would give. For firmer numbers, build the FLORES-200
   corpus and rerun; the pipeline does this from one command.
 
-- Claude is not included. Its tokeniser is not published, so any Claude number
-  would be a guess dressed up as a measurement. I leave it out rather than fake
-  it. See the note in the README.
-
 - Dialect and register. I use standard written Iranian Persian. Other varieties
   such as Dari and Tajik, and colloquial or heavily informal registers, may
   tokenise differently. My sample is everyday prose, not code, poetry, or
