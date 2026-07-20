@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "persiantokenbench"
-version = "0.1.0"
+version = "1.0.0"
 description = "Measuring how much more Persian text costs than English, at the tokeniser level"
 readme = "README.md"
 requires-python = ">=3.11"
