@@ -7,6 +7,7 @@ def test_plot_ratio_writes_a_png(tmp_path):
     summary = pd.DataFrame(
         {
             "tokeniser": ["a", "b"],
+            "n": [45, 45],
             "mean_ratio": [3.0, 1.5],
             "ci_low": [2.8, 1.4],
             "ci_high": [3.2, 1.6],
